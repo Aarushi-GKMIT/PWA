@@ -19,6 +19,6 @@ jobs:
       - name: Deploy project to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --service pwa --yes
+        run: railway up --service pwa
 
 
