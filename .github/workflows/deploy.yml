@@ -19,6 +19,8 @@ jobs:
       - name: Deploy project to Railway
         env:
           RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --service pwa --ci
+        run: |
+          railway link --project 45bdfc4f-13e8-4f7f-941f-0764221e0624/service/b99119ef-6545-4442-9641-e92de2005843
+          railway up --service pwa --ci
 
 
