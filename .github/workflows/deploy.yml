@@ -18,6 +18,6 @@ jobs:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
           railway link 45bdfc4f-13e8-4f7f-941f-0764221e0624
-          railway up
+          railway up --ci
 
 
