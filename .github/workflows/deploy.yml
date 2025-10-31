@@ -1,11 +1,14 @@
 name: Deploy to Railway
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -17,7 +20,8 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway link 45bdfc4f-13e8-4f7f-941f-0764221e0624
+          railway link --project 45bdfc4f-13e8-4f7f-941f-0764221e0624
           railway up --ci
+
 
 
